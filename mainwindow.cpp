@@ -24,7 +24,6 @@ MainWindow::MainWindow(QWidget *parent) :
     qt->insert(std::pair<double,double>(90.0, 372.0), 3.3);
     qt->insert(std::pair<double,double>(60.0, 120.0), 3.3);
 
-
     std::vector<std::pair<std::pair<double,double>,double> > result;
     result = qt->searchRange(std::pair<double,double>(0,500),std::pair<double,double>(500,0));
 
