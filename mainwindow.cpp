@@ -27,7 +27,7 @@ MainWindow::MainWindow(QWidget *parent) :
     std::vector<std::pair<std::pair<double,double>,double> > result;
     result = qt->searchRange(std::pair<double,double>(0,500),std::pair<double,double>(500,0));
 
-    for(int i = 0;i<result.size();i++)
+    for(unsigned int i = 0;i<result.size();i++)
     {
         p->drawPoint(result[i].first.first,result[i].first.second);
     }
@@ -88,7 +88,7 @@ void MainWindow::updateQTGraph()
     std::vector<std::pair<std::pair<double,double>,double> > result;
     result = qt->searchRange(std::pair<double,double>(0,500),std::pair<double,double>(500,0));
 
-    for(int i = 0;i<result.size();i++)
+    for(unsigned int i = 0;i<result.size();i++)
     {
         p->drawPoint(result[i].first.first,result[i].first.second);
     }
@@ -117,7 +117,7 @@ void MainWindow::on_pushButton_3_clicked()
     result = qt->searchRange(std::pair<double,double>(ui->lineEdit_3->text().toDouble(),ui->lineEdit_4->text().toDouble()),
                              std::pair<double,double>(ui->lineEdit_5->text().toDouble(),ui->lineEdit_6->text().toDouble()));
 
-    for(int i = 0;i<result.size();i++)
+    for(unsigned int i = 0;i<result.size();i++)
     {
         ui->listWidget->addItem("X:"+QString::number(result[i].first.first) + " Y:" + QString::number(result[i].first.second));
     }
